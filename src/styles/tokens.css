@@ -1,0 +1,71 @@
+:root {
+  /* Superficies */
+  --color-bg: #080C0F;
+  --color-surface: #121316;
+  --color-surface-2: #1b1d21;
+  --color-surface-3: #26282d;
+  --color-border: #222223;
+  --color-border-strong: #3a3d43;
+
+  /* glassmorphism */
+  --color-glass: rgba(0, 0, 0, 0.05);
+
+  /* Degradado sutil de las tarjetas: mas claro arriba, como en el diseno. */
+  --gradient-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+
+  /* Texto */
+  --color-text: #ffffff;
+  --color-text-muted: #969798;
+  --color-text-dim: #6e7178;
+
+  /* Acento */
+  --color-accent: #FFEE00;
+  --color-accent-hover: #ffea4d;
+  --color-on-accent: #000000;
+
+  /* Puntos de estado (status_class de la API) */
+  --color-dot-grey: #8a8d93;
+  --color-dot-blue: #3e8bff;
+  --color-dot-green: #35c759;
+  --color-dot-yellow: #ffe000;
+
+  /* Espaciado (base 4px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+
+  /* Radios */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Tipografía */
+  --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+  --fs-xs: 11px;
+  --fs-sm: 12px;
+  --fs-md: 14px;
+  --fs-lg: 16px;
+  --fs-xl: 20px;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Movimiento */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Layout */
+  --app-max-width: 480px;
+  --header-height: 56px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}

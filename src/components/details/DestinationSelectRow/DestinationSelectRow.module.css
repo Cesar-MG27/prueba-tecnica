@@ -1,0 +1,92 @@
+/* La columna del marcador lleva 44px para que el halo no se recorte. */
+.row {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: var(--space-3);
+  width: 100%;
+  text-align: left;
+  background: none;
+}
+
+/* Columna del indicador: circulo arriba y linea conectora hasta el siguiente. */
+.marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/*
+ * El halo son dos anillos con box-shadow: el interior del color del fondo abre
+ * el hueco y el exterior lo cierra, sin ocupar espacio en el layout.
+ */
+.bullet {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: transparent;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text-dim);
+  box-shadow:
+    0 0 0 2px var(--color-bg),
+    0 0 0 3px var(--color-border-strong);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    color var(--transition-base);
+}
+
+.bullet.selected {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-on-accent);
+  box-shadow:
+    0 0 0 2px var(--color-bg),
+    0 0 0 4px var(--color-accent);
+}
+
+.line {
+  flex: 1;
+  width: 1px;
+  min-height: 16px;
+  background: linear-gradient(to bottom, var(--color-border-strong), transparent);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding-bottom: var(--space-4);
+}
+
+.kind {
+  font-size: var(--fs-xs);
+  color: var(--color-text-dim);
+  letter-spacing: 0.06em;
+}
+
+.city {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-muted);
+  transition: color var(--transition-base);
+}
+
+.city.cityActive {
+  color: var(--color-text);
+}
+
+.address {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: var(--space-2);
+}

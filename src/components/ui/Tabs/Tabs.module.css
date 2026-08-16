@@ -1,0 +1,53 @@
+/*
+ * `space-evenly` reparte el mismo hueco entre las pestanas y en los extremos,
+ * asi la primera y la ultima no quedan pegadas a los costados.
+ */
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.tab {
+  padding-block: var(--space-2);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+/* Hover y foco por teclado tambien se pintan en amarillo. */
+.tab:hover,
+.tab:focus-visible {
+  color: var(--color-accent);
+  outline: none;
+}
+
+.active {
+  color: var(--color-accent);
+}
+
+/* El subrayado ocupa 35% de la etiqueta y crece desde la izquierda. */
+.label {
+  position: relative;
+  display: inline-block;
+  padding-bottom: var(--space-2);
+}
+
+.label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  height: 2px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+
+.active .label::after {
+  transform: scaleX(1);
+}

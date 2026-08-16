@@ -1,0 +1,35 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-2) var(--space-4) calc(var(--space-8) + var(--safe-bottom));
+}
+
+/*
+ * `overflow: visible` deja que el avatar sobresalga por arriba, por eso el boton
+ * de abajo lleva su propio radio en vez de apoyarse en el recorte de la tarjeta.
+ */
+.statusCard {
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  background-color: var(--color-glass);
+  background-image: var(--gradient-surface);
+  margin-top: var(--space-8);
+}
+
+.stepper {
+  padding: var(--space-6) var(--space-5) var(--space-2);
+}
+
+.trackButton {
+  border-radius: 0 0 calc(var(--radius-lg) - 1px) calc(var(--radius-lg) - 1px);
+  padding: var(--space-6) var(--space-4) var(--space-6);
+  font-size: var(--fs-lg);
+}

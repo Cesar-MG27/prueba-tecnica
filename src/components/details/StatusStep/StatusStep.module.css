@@ -1,0 +1,78 @@
+.step {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: var(--space-3);
+}
+
+.marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-surface-3);
+  border: 1px solid var(--color-border-strong);
+  color: transparent;
+  flex-shrink: 0;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.circle.active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+/* Los pasos pendientes muestran un punto en lugar del check. */
+.circle:not(.active) .check {
+  display: none;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-text-muted);
+}
+
+.circle.active .dot {
+  display: none;
+}
+
+.check {
+  stroke-width: 2.5;
+}
+
+.line {
+  flex: 1;
+  width: 2px;
+  min-height: 18px;
+  background-color: var(--color-border-strong);
+  transition: background-color var(--transition-base);
+}
+
+.line.activeLine {
+  background-color: var(--color-accent);
+}
+
+.label {
+  font-size: var(--fs-md);
+  color: var(--color-text-dim);
+  padding-bottom: var(--space-5);
+  transition: color var(--transition-base);
+}
+
+.label.activeLabel {
+  color: var(--color-text);
+  font-weight: var(--fw-medium);
+}

@@ -1,0 +1,55 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.orderNumber {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-light);
+  color: var( --color-text-muted)
+}
+
+.orderNumber span{
+  font-weight: var(--fw-regular);
+  color: var(--color-text);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-image: var(--gradient-surface);
+  transition: background-color var(--transition-fast);
+}
+
+.card:hover {
+  background-color: var(--color-surface-2);
+}
+
+.destinations {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-3) var(--space-3) 0;
+}
+
+/*
+ * Los botones se pegan al borde de la tarjeta: cuadrados por fuera y de pastilla
+ * por dentro. El `overflow: hidden` de la Card redondea las esquinas inferiores.
+ */
+.footer {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.pickupButton {
+  border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
+  padding-inline: var(--space-5);
+}
+
+.resumeButton {
+  margin-left: auto;
+  border-radius: var(--radius-pill) 0 0 var(--radius-pill);
+  padding: var(--space-3) var(--space-5);
+}

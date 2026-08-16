@@ -1,0 +1,22 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  background-image: var(--gradient-surface);
+}
+
+.reference {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.orderNumber {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  margin-bottom: var(--space-4);
+}
+
+.destinations {
+  display: flex;
+  flex-direction: column;
+}

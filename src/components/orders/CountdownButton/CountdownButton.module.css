@@ -1,0 +1,38 @@
+.button {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  white-space: nowrap;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    opacity var(--transition-base),
+    transform var(--transition-fast);
+}
+
+.button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.waiting {
+  background-color: var(--color-surface-3);
+  color: var(--color-text-muted);
+  opacity: 0.8;
+}
+
+/* La cuenta regresiva resalta en amarillo sobre la etiqueta apagada. */
+.time {
+  color: var(--color-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.ready {
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  opacity: 1;
+}
+
+.ready:hover {
+  background-color: var(--color-accent-hover);
+}

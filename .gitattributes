@@ -1,0 +1,12 @@
+# Normaliza los finales de linea: el repo guarda LF y cada quien recibe los
+# suyos al hacer checkout. Evita diffs completos entre Windows y macOS/Linux.
+* text=auto eol=lf
+
+# Binarios: que git no intente convertirlos.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary

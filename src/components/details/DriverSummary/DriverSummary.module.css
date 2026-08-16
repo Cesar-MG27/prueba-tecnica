@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  /* Saca el avatar por encima del borde de la tarjeta que lo contiene. */
+  margin-top: calc(var(--space-8) * -1);
+}
+
+.time {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-medium);
+}

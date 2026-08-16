@@ -1,0 +1,19 @@
+.icon {
+  flex-shrink: 0;
+  color: inherit;
+}
+
+/*
+ * El asset actua como mascara: la forma viene de su canal alfa y el relleno
+ * lo pone `currentColor`, para que el icono herede el color del contexto.
+ */
+.masked {
+  display: inline-block;
+  background-color: currentColor;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}

@@ -1,0 +1,15 @@
+.row,
+.link {
+  display: block;
+  font-size: var(--fs-md);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.link {
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-accent);
+}

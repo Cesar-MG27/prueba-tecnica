@@ -1,0 +1,64 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+/* El recuadro con borde es solo la cabecera; el contenido fluye debajo. */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  /* background-color: var(--color-surface); */
+  color: var(--color-text);
+  transition: background-color var(--transition-fast);
+}
+
+
+.title {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
+}
+
+/*
+ * El asset ya viene girado hacia abajo desde el componente Icon (propiedad
+ * `rotate`), asi que aqui solo se voltea 180deg al abrir. Se mantiene un unico
+ * elemento en lugar de intercambiar iconos para conservar la transicion.
+ */
+.chevron {
+  color: var(--color-accent);
+  transform: rotate(0deg);
+  transition: transform var(--transition-base);
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+/* El truco 0fr -> 1fr permite animar hasta la altura real del contenido. */
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows var(--transition-base),
+    opacity var(--transition-fast);
+}
+
+.panel.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.panelInner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.content {
+  padding: var(--space-5) var(--space-4) 0;
+}

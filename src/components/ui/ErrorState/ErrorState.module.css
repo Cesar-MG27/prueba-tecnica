@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+}
+
+.icon {
+  color: var(--color-dot-grey);
+}
+
+.title {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
+}
+
+.message {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}

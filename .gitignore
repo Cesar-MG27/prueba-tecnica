@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-ssr
+.vite
+.vercel
+
+# Cache incremental de TypeScript (lo genera `tsc -b`)
+*.tsbuildinfo
+.env.local
+*.local
+.DS_Store
